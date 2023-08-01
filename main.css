@@ -1,0 +1,207 @@
+:root {
+    --main-body-bg: #fafafa;
+    --main-bg: #fff;
+    --main-text-color: #111517;
+    --main-input-color: #848484;
+}
+
+.dark {
+    --main-body-bg: #202c36;
+    --main-bg: #2b3844;
+    --main-text-color: #fff;
+    --main-input-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Nunito Sans";
+    font-weight: 300;
+    src:  url("./fonts/nunito-sans-v15-latin-300.woff2") format("woff2"), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url("./fonts/nunito-sans-v15-latin-300.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+
+  }
+  /* nunito-sans-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Nunito Sans";
+    font-weight: 400;
+    src: url("./fonts/nunito-sans-v15-latin-regular.woff2") format("woff2"), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url("./fonts/nunito-sans-v15-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+
+}
+  /* nunito-sans-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Nunito Sans";
+    font-weight: 800;
+    src: url("./fonts/nunito-sans-v15-latin-800.woff2") format("woff2"), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url("./fonts/nunito-sans-v15-latin-800.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-body-bg);
+    font-family: "Nunito Sans";
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    background-color: var(--main-bg);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo-svg {
+    fill: var(--main-text-color);
+}
+
+.site-header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+
+.site-header__button {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    border: none;
+    font-family: "Nunito Sans";
+    font-weight: 600;
+    line-height: normal;
+}
+
+.site-header__button::before {
+    content: "";
+    display: inline-block;
+    background-image: url("./images/moon.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+main {
+    padding-top: 48px;
+}
+
+.site-form {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.site-form__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-form__input {
+    width: 480px;
+    padding: 18px 18px 18px 74px;
+    background-color: var(--main-bg);
+    border: none;
+}
+
+
+.site-form__input-wrapper::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-image: url("./images/search.svg");
+    background-repeat: no-repeat;
+    color: var(--main-input-color);
+    width: 18px;
+    height: 18px;
+    margin-right: 24px;
+    left: 28px;
+    top: 16px;
+}
+
+.site-form__select {
+    padding: 18px 22px 18px 24px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #fff; */
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 75px;
+    row-gap: 67px;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.list__item {
+    width: 264px;
+    background-color: var(--main-bg);
+
+}
+
+.list__desc {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-bottom: 46px;
+}
+
+.list__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.list__text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+strong {
+    color: var(--main-text-color);
+}
+
+.list__text {
+    color: var(--main-text-color);
+}
+
+.list__title {
+    color: var(--main-text-color);
+}
+
+.site-form__select {
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+}
